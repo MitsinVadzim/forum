@@ -7,4 +7,5 @@ rootProject.name = 'forum'
 
 include 'server'
 include 'ui'
+include 'buildSrc'
 

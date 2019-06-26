@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+
+  postgres-db:
+    image: mdillon/postgis:10-alpine
+    container_name: forum-postgres
+    environment:
+      - POSTGRES_USER=forum
+      - POSTGRES_PASSWORD=forum
+      - POSTGRES_DB=forum_db
+    ports:
+      - "5432:5432"

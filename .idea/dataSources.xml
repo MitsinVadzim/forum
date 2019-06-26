@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="forum-local" uuid="30fad40e-3c89-4c98-8030-d8586519dbdc">
+    <data-source source="LOCAL" name="forum-local" uuid="a986ee28-abc5-4677-a19e-bb0f8e6a1156">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.64.2:5432/forum_db</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/forum_db</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -1,31 +1,10 @@
---
-spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: "${SPRING_DATASOURCE_URL:}"
-    username: "${SPRING_DATASOURCE_USERNAME:}"
-    password: "${SPRING_DATASOURCE_PASSWORD:}"
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
-  servlet:
-    multipart:
-      max-file-size: -1
-      max-request-size: -1
-  jackson:
-    default-property-inclusion: non_null
-
-
 ---
 ---
 spring:
   profiles: local
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         jdbc:
@@ -33,6 +12,7 @@ spring:
             non_contextual_creation: true
         dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
     show-sql: true
+    generate-ddl: true
   servlet:
     multipart:
       max-file-size: 200MB
@@ -42,6 +22,6 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: forum
     password: forum
-    url: jdbc:postgresql://192.168.64.2:5432/forum_db
+    url: jdbc:postgresql://localhost:5432/forum_db
   flyway:
     baseline-on-migrate: true

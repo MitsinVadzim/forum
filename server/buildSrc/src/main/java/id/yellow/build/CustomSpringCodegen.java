@@ -1,4 +1,4 @@
-package id.vadim.build;
+package id.yellow.build;
 
 import io.swagger.codegen.CodegenProperty;
 import io.swagger.codegen.languages.SpringCodegen;

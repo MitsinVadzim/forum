@@ -1,4 +1,4 @@
-package id.vadim.build;
+package id.yellow.build;
 
 import io.swagger.codegen.DefaultGenerator;
 import io.swagger.codegen.config.CodegenConfigurator;

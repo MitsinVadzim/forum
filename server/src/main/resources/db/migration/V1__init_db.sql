@@ -1,6 +1,6 @@
 CREATE TABLE post (
     id UUID PRIMARY KEY,
-    text TEXT,
+    content TEXT,
     title TEXT,
     image_url TEXT,
     created_at TIMESTAMPTZ,

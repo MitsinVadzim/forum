@@ -18,8 +18,8 @@ public class PostEntity extends AuditableEntity{
     @Column(name = "id", updatable = false, insertable = false)
     private UUID id;
 
-    @Column(name = "text", nullable = false)
-    private String text;
+    @Column(name = "content", nullable = false)
+    private String content;
 
     @Column(name = "title", nullable = false)
     private String title;

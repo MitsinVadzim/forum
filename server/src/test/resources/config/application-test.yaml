@@ -1,0 +1,19 @@
+---
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgis:10-alpine://hostname/databasename
+    validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
+  flyway:
+    baseline-on-migrate: true

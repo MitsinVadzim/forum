@@ -1,0 +1,32 @@
+<div  class="mat-elevation-z8">
+  <mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
+  <mat-table [style.display]="loading === false ? 'block' : 'none'" #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <ng-container  matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> PostId </mat-header-cell>
+      <mat-cell *matCellDef="let post"> {{post.id}} </mat-cell>
+    </ng-container>
+    <ng-container  matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let post"> {{post.title}} </mat-cell>
+    </ng-container>
+    <ng-container  matColumnDef="content">
+      <mat-header-cell *matHeaderCellDef> Content </mat-header-cell>
+      <mat-cell *matCellDef="let post"> {{post.content}} </mat-cell>
+    </ng-container>
+    <ng-container  matColumnDef="imageUrl">
+      <mat-header-cell *matHeaderCellDef> ImageUrl </mat-header-cell>
+      <mat-cell *matCellDef="let post"> {{post.imageUrl}} </mat-cell>
+    </ng-container>
+    <ng-container  matColumnDef="operations">
+      <mat-header-cell *matHeaderCellDef> Operations </mat-header-cell>
+      <mat-cell *matCellDef="let element">  <button  mat-button  color="primary" (click)="deletePost(element.id)"><mat-icon>delete</mat-icon>
+      </button>  <button  mat-button  color="primary" (click)="editPost(element.id)"><mat-icon>edit</mat-icon></button>  </mat-cell>
+    </ng-container>
+  </mat-table>
+  <mat-paginator #paginator [style.display]="loading === false ? 'block' : 'none'" [pageSize]="5"></mat-paginator>
+  <mat-card-actions>
+    <button mat-raised-button [routerLink]="['/post-create']" color="primary">Add</button>
+  </mat-card-actions>
+</div>

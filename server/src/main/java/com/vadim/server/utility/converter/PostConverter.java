@@ -26,7 +26,7 @@ public class PostConverter {
                 .collect(Collectors.toList());
     }
 
-    public static PostEntity toBannerEntity(PostModel postModel) {
+    public static PostEntity toPostEntity(PostModel postModel) {
 
         return PostEntity.builder()
                 .content(postModel.getContent())

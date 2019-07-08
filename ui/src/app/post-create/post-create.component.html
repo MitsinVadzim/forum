@@ -1,0 +1,39 @@
+<mat-card  class="my-card">
+  <mat-card-header>
+    <mat-card-title>Create Post</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form  class="my-form">
+      <table  style="width: 100%"  cellspacing="10">
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-label>Title</mat-label>
+              <input  matInput  placeholder="Title" [(ngModel)]="title"  name="title"  required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-label>Content</mat-label>
+              <input  matInput  placeholder="Content" [(ngModel)]="content"  name="content"  required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-label>Image Url</mat-label>
+              <input  matInput  placeholder="Image Url" [(ngModel)]="imageUrl"  name="imageUrl"  required>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="createPost()" color="primary">Create</button>
+  </mat-card-actions>
+</mat-card>

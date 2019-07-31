@@ -73,9 +73,7 @@ components:
         content:
           type: string
         imageUrl:
-          type: array
-          items:
-            type: string
+          type: string
     Problem:
       type: object
       properties:

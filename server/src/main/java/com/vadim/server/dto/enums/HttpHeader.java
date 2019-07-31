@@ -11,7 +11,7 @@ public enum HttpHeader {
 
     private String value;
 
-    HttpHeader(String value) {
+    HttpHeader(final String value) {
         this.value = value;
     }
 

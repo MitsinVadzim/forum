@@ -1,11 +1,12 @@
 package com.vadim.server.exception;
 
-import org.zalando.problem.AbstractThrowableProblem;
-import org.zalando.problem.Status;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-public class NotFoundException extends AbstractThrowableProblem {
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class NotFoundException extends RuntimeException {
 
-    public NotFoundException(String message) {
-        super(ErrorType.NOT_FOUND, "Not Found", Status.NOT_FOUND, message);
+    public NotFoundException(final String message) {
+        super(message);
     }
 }

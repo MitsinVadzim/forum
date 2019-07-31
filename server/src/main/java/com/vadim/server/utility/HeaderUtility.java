@@ -11,12 +11,12 @@ import static org.springframework.http.HttpHeaders.LINK;
 @UtilityClass
 public class HeaderUtility {
 
-    public static <T> HttpHeaders createPaginationHeaders(Page<T> page, String methodPath) {
+    public static <T> HttpHeaders createPaginationHeaders(final Page<T> page, final String methodPath) {
 
         return buildHeaders(page, UriComponentsBuilder.fromUriString(methodPath).toUriString());
     }
 
-    private static <T> HttpHeaders buildHeaders(Page<T> page, String baseUri) {
+    private static <T> HttpHeaders buildHeaders(final Page<T> page, final String baseUri) {
 
         String link = "<" + buildPageUri(baseUri, 1, page.getSize()) + ">; rel=\"first\", ";
         if (page.hasPrevious()) {
@@ -34,7 +34,7 @@ public class HeaderUtility {
         return headers;
     }
 
-    private static String buildPageUri(String baseUri, int page, int size) {
+    private static String buildPageUri(final String baseUri, final int page, final int size) {
 
         return UriComponentsBuilder.fromUriString(baseUri)
                 .queryParam("page", page)

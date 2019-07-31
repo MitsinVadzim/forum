@@ -12,7 +12,6 @@ public class WebConfiguration {
     @Bean
     public CorsFilter corsFilter() {
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.addAllowedMethod("*");
@@ -21,6 +20,7 @@ public class WebConfiguration {
         corsConfiguration.addExposedHeader("X-Total-Count");
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.setMaxAge(1800L);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(source);
     }

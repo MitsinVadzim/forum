@@ -1,16 +1,16 @@
 package com.vadim.server.service;
 
-import com.vadim.server.model.PostModel;
+import com.vadim.model.rest.RestPostModel;
 import org.springframework.data.domain.Page;
 
 import java.util.UUID;
 
 public interface PostService {
-    Page<PostModel> getPosts(Integer page, Integer size);
+    Page<RestPostModel> getPosts(Integer page, Integer size);
 
-    PostModel createPost(PostModel postModel);
+    RestPostModel createPost(RestPostModel postModel);
 
     void deletePost(UUID postId);
 
-    PostModel getPost(UUID postId);
+    RestPostModel getPost(UUID postId);
 }

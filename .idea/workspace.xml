@@ -1,153 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fae0fb0-2188-4aed-bdc3-8106677cb736" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/server.swagger.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/java/com/vadim/openapitools/CustomCodegenParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/java/com/vadim/openapitools/CustomCodegenProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/java/com/vadim/openapitools/CustomFormatValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/java/com/vadim/openapitools/CustomSpringCodegen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiController.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiDelegate.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiException.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiOriginFilter.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiResponseMessage.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/apiUtil.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/beanValidation.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/beanValidationCore.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/beanValidationPathParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/beanValidationQueryParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/bodyParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/customInstantDeserializer.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/enumClass.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/enumOuterClass.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/exampleReturnTypes.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/formParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/generatedAnnotation.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/headerParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/homeController.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/implicitHeader.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/jacksonConfiguration.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/README.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/RFC3339DateFormat.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/application.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/defaultBasePath.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/openapi2SpringBoot.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-boot/pom.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/README.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/apiClient.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/apiKeyRequestInterceptor.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/clientConfiguration.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/formParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-cloud/pom.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/README.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/RFC3339DateFormat.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/application.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/defaultBasePath.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/openapiUiConfiguration.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/pom.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/webApplication.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/libraries/spring-mvc/webMvcConfiguration.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/methodBody.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/notFoundException.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/openapi.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/openapiDocumentationConfig.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/optionalDataType.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/pathParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/pojo.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/project/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/project/plugins.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/queryParams.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/returnTypes.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/typeInfoAnnotation.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/xmlAnnotation.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/META-INF/services/org.openapitools.codegen.CodegenConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/checkstyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/pmd.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gradle/checkstyle.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gradle/jacoco.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gradle/mapstruct.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gradle/pmd.gradle" afterDir="false" />
+    <list default="true" id="3450cf70-2396-487f-abb5-b42f334817b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/30fad40e-3c89-4c98-8030-d8586519dbdc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/30fad40e-3c89-4c98-8030-d8586519dbdc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/buildSrc/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/src/main/java/id/yellow/build/CustomSpringCodegen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/src/main/java/id/yellow/build/SwaggerGenerateTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/src/main/resources/JavaSpring/api.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/api.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/src/main/resources/JavaSpring/beanValidation.mustache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/buildSrc/src/main/resources/JavaSpring/model.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/server/buildSrc/src/main/resources/CustomJavaSpring/model.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/gradle/swagger.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/gradle/swagger.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/server/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/server/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/swagger/configuration-security.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/swagger/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/swagger/openapi.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="forum-local" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="forum-local" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="forum-local" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="forum-local" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="forum-local" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -166,12 +30,18 @@
         <task path="$PROJECT_DIR$/server">
           <activation />
         </task>
-        <task path="$PROJECT_DIR$/buildSrc">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
             <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="forum" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="forum" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="server" type="f1a62948:ProjectNode" />
@@ -200,56 +70,21 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Ok3n5JtXcW6KXJxo9JOaXRKiVo" />
+  <component name="ProjectId" id="1OlLz1OKp80mwUMxxVcQyNvsSqV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
-    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/ui/node_modules/protractor" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/ui/node_modules/typescript/lib" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/server/gradle" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/ui" />
-    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="gradle clean openApiGenerate" />
-      <command value="server[clean openApiGenerate]" />
-      <command value="gradle server clean openApiGenerate" />
-      <command value="gradle server clean build" />
+      <command value="gradle forum clean build" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -264,143 +99,87 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.server [clean build]">
-    <configuration name="server [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle./home/vadim/Projects/forum [build]">
+    <configuration name="/home/vadim/Projects/forum [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
             <option value="build" />
           </list>
         </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="server [clean generateApi]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="generateApi" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="server [clean openApiGenerate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="openApiGenerate" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="server [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="server [openApiGenerate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="openApiGenerate" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="forum.buildSrc" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="E2E Tests (ui)" type="JavaScriptTestRunnerProtractor">
-      <config-file value="$PROJECT_DIR$/ui/e2e/protractor.conf.js" />
-      <node-interpreter value="project" />
-      <protractor-package value="$PROJECT_DIR$/ui/node_modules/protractor" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Angular Application (ui)" type="JavascriptDebugType" uri="http://localhost:4200">
-      <method v="2" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="forum.buildSrc" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="server.main" />
+      <module name="server_main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.vadim.server.ServerApplication" />
-      <option name="ACTIVE_PROFILES" value="local" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.server [clean generateApi]" />
-      <item itemvalue="JavaScript Debug.Angular Application (ui)" />
-      <item itemvalue="Protractor.E2E Tests (ui)" />
+      <item itemvalue="Gradle./home/vadim/Projects/forum [build]" />
       <item itemvalue="Spring Boot.ServerApplication" />
-      <item itemvalue="Gradle.server [clean]" />
-      <item itemvalue="Gradle.server [openApiGenerate]" />
-      <item itemvalue="Gradle.server [clean openApiGenerate]" />
-      <item itemvalue="Gradle.server [clean build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.server [clean build]" />
-        <item itemvalue="Gradle.server [clean openApiGenerate]" />
-        <item itemvalue="Gradle.server [openApiGenerate]" />
-        <item itemvalue="Gradle.server [clean]" />
-        <item itemvalue="Gradle.server [clean generateApi]" />
+        <item itemvalue="Gradle./home/vadim/Projects/forum [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -409,20 +188,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6fae0fb0-2188-4aed-bdc3-8106677cb736" name="Default Changelist" comment="" />
-      <created>1561032915646</created>
+      <changelist id="3450cf70-2396-487f-abb5-b42f334817b0" name="Default Changelist" comment="" />
+      <created>1564547496056</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1561032915646</updated>
-      <workItem from="1561032919812" duration="7307000" />
-      <workItem from="1561096901426" duration="1194000" />
-      <workItem from="1561098163264" duration="5717000" />
-      <workItem from="1561104032880" duration="957000" />
-      <workItem from="1561116586652" duration="1552000" />
-      <workItem from="1561360357595" duration="1546000" />
-      <workItem from="1561448300014" duration="7455000" />
-      <workItem from="1564507933937" duration="31000" />
-      <workItem from="1564507994756" duration="3217000" />
+      <updated>1564547496056</updated>
+      <workItem from="1564547504750" duration="50000" />
     </task>
     <servers />
   </component>
@@ -439,13 +210,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="gradleExecuteTaskHistory">
-    <option value="$PROJECT_DIR$/server" />
-    <option value="clean generateApi" />
-    <option value="bootRun" />
   </component>
 </project>

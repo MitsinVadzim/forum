@@ -1,15 +1,3 @@
-swagger: "2.0"
-info:
-  title: Forum
-  version: "0.1"
-  description: Forum - API
-
-produces: ["application/json"]
-
-basePath: /api/v1
-
-tags:
-  - name: Post
 
 paths:
 
@@ -32,70 +20,7 @@ paths:
               "$ref": "#/definitions/PostModel"
         "401":
           "$ref": "#/responses/Unauthorized"
-    post:
-      tags: [Post]
-      operationId: createPost
-      security:
-        - userAuth: []
-      consumes:
-        - application/json
-      parameters:
-        - in: body
-          name: postModel
-          required: true
-          schema:
-            "$ref": "#/definitions/PostModel"
-      responses:
-        "201":
-          description: Created
-          schema:
-            "$ref": "#/definitions/PostModel"
-        "400":
-          "$ref": "#/responses/BadRequest"
-        "401":
-          "$ref": "#/responses/Unauthorized"
-        "403":
-          "$ref": "#/responses/Forbidden"
 
-  "/posts/{postId}":
-    parameters:
-      - name: postId
-        in: path
-        required: true
-        type: string
-        format: uuid
-    get:
-      tags: [Post]
-      operationId: getPost
-      security:
-      - userAuth: []
-      responses:
-        "200":
-          description: OK
-          schema:
-            "$ref": "#/definitions/PostModel"
-        "400":
-          "$ref": "#/responses/BadRequest"
-        "401":
-          "$ref": "#/responses/Unauthorized"
-        "403":
-          "$ref": "#/responses/Forbidden"
-        "404":
-          "$ref": "#/responses/NotFound"
-    delete:
-      tags: [Post]
-      operationId: deletePost
-      security:
-        - userAuth: []
-      responses:
-        "204":
-          description: No Content
-        "400":
-          "$ref": "#/responses/BadRequest"
-        "401":
-          "$ref": "#/responses/Unauthorized"
-        "403":
-          "$ref": "#/responses/Forbidden"
 definitions:
 
   PostModel:
@@ -112,7 +37,9 @@ definitions:
       content:
         type: string
       imageUrl:
-        type: string
+        type: array
+        items:
+          type: string
 
   Problem:
     type: object
@@ -164,20 +91,7 @@ parameters:
     maximum: 30
 
 responses:
-
   Unauthorized:
     description: Unauthorized
-    schema:
-      $ref: "#/definitions/Problem"
-  BadRequest:
-    description: Bad Request
-    schema:
-      $ref: "#/definitions/Problem"
-  Forbidden:
-    description: Forbidden
-    schema:
-      $ref: "#/definitions/Problem"
-  NotFound:
-    description: Not Found
     schema:
       $ref: "#/definitions/Problem"

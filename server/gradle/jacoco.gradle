@@ -1,0 +1,52 @@
+jacoco {
+    toolVersion = "0.8.4"
+}
+def jacocoExclude =  [
+        '**/ServerApplication.class',
+        'com/vadim/controllers/api/*.class',
+        'com/vadim/model/rest/*.class',
+        'com/vadim/openapitools/*.class',
+        'com/vadim/server/configuration/*.class',
+        'com/vadim/server/entity/*.class',
+        'com/vadim/server/exception/*.class',
+]
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/reports/jacoco/html")
+    }
+    afterEvaluate {
+        getClassDirectories().setFrom(classDirectories.files.collect {
+            fileTree(dir: it, exclude: jacocoExclude)
+        })
+    }
+}
+
+jacocoTestCoverageVerification {
+    afterEvaluate {
+        getClassDirectories().setFrom(classDirectories.files.collect {
+            fileTree(dir: it, exclude: jacocoExclude)
+        })
+    }
+
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.80
+            }
+        }
+    }
+}
+
+
+test {
+    jacoco {
+        destinationFile = file("$buildDir/reports/jacoco/test.exec")
+        classDumpDir = file("$buildDir/reports/jacoco/classpathdumps")
+    }
+}
+
+check.dependsOn jacocoTestCoverageVerification
+jacocoTestCoverageVerification.mustRunAfter jacocoTestReport

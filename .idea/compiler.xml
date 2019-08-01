@@ -5,8 +5,8 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Downloads.forum.ui.main" target="11" />
-      <module name="Downloads.forum.ui.test" target="11" />
+      <module name="com.vadim.forum.server.main" target="11" />
+      <module name="com.vadim.forum.server.test" target="11" />
       <module name="forum.buildSrc.main" target="11" />
       <module name="forum.buildSrc.test" target="11" />
       <module name="forum.server.main" target="11" />

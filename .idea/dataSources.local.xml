@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="forum-local" uuid="30fad40e-3c89-4c98-8030-d8586519dbdc">
-      <database-info product="PostgreSQL" version="10.7" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" dbms="POSTGRES" exact-version="10.7" exact-driver-version="42.2">
+    <data-source name="forum-local" uuid="a986ee28-abc5-4677-a19e-bb0f8e6a1156">
+      <database-info product="PostgreSQL" version="10.7" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="10.7" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
@@ -10,8 +10,8 @@
       <user-name>forum</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
+          <node kind="database" qname="forum_db">
+            <node kind="schema" qname="public" />
           </node>
         </introspection-scope>
       </schema-mapping>

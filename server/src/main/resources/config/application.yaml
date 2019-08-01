@@ -1,4 +1,29 @@
 ---
+app:
+  jwt:
+    base64-secret: "${APP_JWT_BASE64_SECRET:}"
+    access-token-validity: "3600" # 1 hour in seconds
+    refresh-token-validity: "2592000" # 30 days in seconds
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "${SPRING_DATASOURCE_URL:}"
+    username: "${SPRING_DATASOURCE_USERNAME:}"
+    password: "${SPRING_DATASOURCE_PASSWORD:}"
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: "${PORT:8080}"
+
 ---
 spring:
   profiles: local
@@ -10,9 +35,7 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
     show-sql: true
-    generate-ddl: true
   servlet:
     multipart:
       max-file-size: 200MB
@@ -25,3 +48,37 @@ spring:
     url: jdbc:postgresql://localhost:5432/forum_db
   flyway:
     baseline-on-migrate: true
+
+---
+
+---
+spring:
+  profiles: test
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+      file-size-threshold: 1MB
+  flyway:
+    baseline-on-migrate: true
+
+---
+
+app:
+  jwt:
+    base64-secret: "dvkfGCq2G00TFJ3j+4UDS+CPwAVLkLziJXlXUvNy2jr0NkIH4QPtfXOLpHK1G++RixsyY5CX6BRh82lZySF4Xg=="
+  google:
+    cloud:
+      storage:
+        bucket: "drivefocus-bucket"
+        key: "ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAiZHJpdmVmb2N1cyIsCiAgInByaXZhdGVfa2V5X2lkIjogIjhjMzU4YWJlZDJkNWUzZGQ1ZjIyMDcxMzNiMDUyOWIzZTNlNTg1NWIiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRRHNZMzNOb2s4cDdYa0ZcbjdnZ1JDZzc0QlM5YUR6OExlSnQxTnI2RGpiWG80ODZ0T21HVTArRlRHTFoyekVSZ1F3bnF4TlJ0a2VzZ1dzeHlcblNyMXFaRWIxQnYvNlpSdlVrR3ZwdDZ0NytsNFM5MkZnc1oyMFk5VEpJNTBsOW8yL2UzVW9YbFlvd2F1QlRTYUFcbmdsbTRjb0pFRDExbHlyV2x6azJwblBDaktFMzRpNG95b3VpQnN6TE5mVUNIUmJteXl0Z1orZmRtMjE5N0JnQStcbjRlKzJqYW1TdTNtSGQ5Q0FpcXBaVWtBWW5oTnJrLy9nOS9ySi9EZzkxbGxpUzdIaEppelNUU0RvelNZb1ZZeHRcbngvY1NJMnNRRDVLVmFPUHNDRjcvMzZ6azd0UDBIclh1OWJMN093ZmFEUStVRlMva1VxemNPa2s3N2h6NW5CSXlcbldJYmx3UGpiQWdNQkFBRUNnZ0VBSWhVQ0tXalNjeUFiQitEVzV1WUZYSHNhNWFnM0ZjZFEycWlHOVY2ME1KelBcbnlxZ1ZNNmtNM3JjOGI0cHAvVnNORGYxTkIzTTNiRlhMRGx0NlRlR2hYV2loOVk4b1lSQmxqcS85bUlWemxOWjRcbkFzSDVFKzRrMnM4NHRDV0ZNR3R6YTl1V0hwQTEweEcxa0dlNjJkNGdyQUZ2SE9NS0o1ckVGY1ZiNkpwQ0M2aURcbjFKcTNUNVJlelRoWXp0V2VabG9ZSituaW9ZR2RQTW1OSHRTejI5eTFwMHFvOFVSZ01weUZqM0lZMUVtci94eDlcblZBZHgxcXBVM05nU0tDYXdjTzd5UXZNRUdwUklYbnR1c2lvSjArWW80UkhoNDU4UjhDQWE2U1ptRjZQS3M3TmxcblZrRmQyY3NJS3hZa3R0M3NyWDFNT1FEWjJHOUMzc0xreG9aSUZEaDhTUUtCZ1FENmp2WlM1RTgxcFBweDg5U0FcbmMwQjU1dUVrc3I1dXJ4Q2VZbEs0MjRuVUFtZWpsb2p5STA0cTk3NGpnOXRSMEFJNHRhdHhpaWJEVGhGbWFxelpcblRSeWROdTBra1JxU3ZlcUlqR25nTGthNFhSd2ZrWldEK1VGbHlHZXl3YUtNbFRia2dKMjV2VUtYeUdRQjFTZ0Jcbk95dWkrZlpwRG1uc0I3Rm9JUUQreUlHZ1p3S0JnUUR4aGIrMjJZU25DcEhDNjg2MjdyeUF4UkpxRm0wZGZTMm9cbkUyWnJ3S05sbmNITWthcUhKeHpMV2EwL0QxQ3BKaFR6RXBIRENRd3JncVFxc1BDRHlibU05R1Q0SjNZOTFmdGNcbllGdlhSeUZwVTFIZWJKOHR5MVExRmJyTytsMGwrcUhqK05LemdEY3Zqc3NyUCtYb0dZK3R5WWNFQ251RFkwZUdcbklaK0hMZkxMYlFLQmdDSTJwVklhVk9xWlZZMTc0eGVMSlZIQUFoeFZ3QVV6S0l6SUZrMmh4TWRMY01WNHg4aHdcbm83cmdTM2xrQnUyNy9xR3B4UGhqQ2ZuL1RnYnpLQmtnRzNrb1IrZUhYTjZPeWxqTSs2UWVEWkFkUHJyYzBWTE5cbkZXNEZtSXRqUDRQODJCc0pxUC8wNVFQKzNCRVgvemR6MGZpV00xeVRHRW1mbjB6OXZMb052UTJmQW9HQUJpMHhcbmRlK2lJTk40WHMvQS9aU2xaWFdrdnVuTDZKRW05Y0ZwUVNBd0RZMDNRNUFHR0dhN3FjZWxVcE9Gc0kyMHczS2Fcbkg2Ni9qTzFPWFhrZzdYM2ZMT2VqSFdXRTlKZmdVY0IxR05CTTNuQ3ZDMDBqMVB2NkwxRmE4YWdkY2JjekpLMWNcblZoTFZWbllFWkJyQ09tbE03MWpVQnhwdGhqS254WnBlaGdwNnh4RUNnWUE4eDBhSmZpbklDUGpPcm40U1VxVGpcblY1cmhGQ2dxbTRzQ05GamgzS01KYnNqTy9DN3dQTkdzdStHQ21ucUJFYmt3Y05tOFJ6dENsUjh6ZWszQ3Q0c3RcbnBjRGROVWVoZ0FZRW9neDZIcTZ1MjllaTJacDVPdkdIUnhmNWJpWjFnbldhcHRweUthVmI1RTZvVlU0Y1Qzc3hcbmdGaXhmQlJuaHlGWEY3MzJGbXphM1E9PVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogImRyaXZlZm9jdXMtY2xvdWQtc3RvcmFnZUBkcml2ZWZvY3VzLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwKICAiY2xpZW50X2lkIjogIjEwMzEyNzU0MTc3Njc4NzM1Mzg5MyIsCiAgImF1dGhfdXJpIjogImh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi9hdXRoIiwKICAidG9rZW5fdXJpIjogImh0dHBzOi8vb2F1dGgyLmdvb2dsZWFwaXMuY29tL3Rva2VuIiwKICAiYXV0aF9wcm92aWRlcl94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92MS9jZXJ0cyIsCiAgImNsaWVudF94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL3JvYm90L3YxL21ldGFkYXRhL3g1MDkvZHJpdmVmb2N1cy1jbG91ZC1zdG9yYWdlJTQwZHJpdmVmb2N1cy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIKfQo="
+

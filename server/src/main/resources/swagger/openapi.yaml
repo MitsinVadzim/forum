@@ -5,7 +5,11 @@ info:
   description: Forum - API
 tags:
   - name: Post
+  - name: Auth
 paths:
+  # ========================================
+  # ===== Post API
+  # ========================================
   /posts:
     get:
       tags:
@@ -27,8 +31,75 @@ paths:
                   $ref: "#/components/schemas/PostModel"
         "401":
           $ref: "#/components/responses/Unauthorized"
+
+  # ========================================
+  # ===== Auth API
+  # ========================================
+  /auth/login:
+    post:
+      tags:
+        - Auth
+      operationId: login
+      security: []
+      requestBody:
+        $ref: "#/components/requestBodies/LoginRequest"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TokenModel"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+  /auth/refresh-token:
+    post:
+      tags:
+        - Auth
+      operationId: refreshToken
+      security: []
+      requestBody:
+        $ref: "#/components/requestBodies/RefreshTokenRequest"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TokenModel"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /auth/signup:
+    post:
+      tags:
+        - Auth
+      operationId: signup
+      security: []
+      requestBody:
+        $ref: "#/components/requestBodies/SignupRequest"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProfileModel"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+
 servers:
   - url: /api/v1
+
 components:
   parameters:
     PageQueryParameter:
@@ -47,8 +118,50 @@ components:
         maximum: 30
         default: 10
   responses:
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    UnsupportedMediaType:
+      description: Unsupported Media Type
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
     Unauthorized:
       description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Conflict:
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    UnprocessableEntity:
+      description: Unprocessable Entity
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    NotAcceptable:
+      description: Not Acceptable
       content:
         application/json:
           schema:
@@ -58,7 +171,77 @@ components:
       type: apiKey
       in: header
       name: Authorization
+  requestBodies:
+    LoginRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/LoginRequest"
+      required: true
+    RefreshTokenRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/RefreshTokenRequest"
+      required: true
+    SignupRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SignupRequest"
+      required: true
   schemas:
+    ProfileModel:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        role:
+          $ref: "#/components/schemas/UserRole"
+        iconUrl:
+          type: string
+        createdAt:
+          type: string
+    UserRole:
+      type: string
+      enum:
+        - USER
+        - ADMIN
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+    RefreshTokenRequest:
+      type: object
+      required:
+        - refreshToken
+      properties:
+        refreshToken:
+          type: string
+    SignupRequest:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
     PostModel:
       type: object
       required:
@@ -74,6 +257,25 @@ components:
           type: string
         imageUrl:
           type: string
+    TokenModel:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        accessIssuedAt:
+          type: integer
+          format: int64
+        accessExpiresIn:
+          type: integer
+          format: int64
+        refreshToken:
+          type: string
+        refreshIssuedAt:
+          type: integer
+          format: int64
+        refreshExpiresIn:
+          type: integer
+          format: int64
     Problem:
       type: object
       properties:

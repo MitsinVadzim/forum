@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a2337a9-1f4e-4f34-ab7e-44dd3c52263e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/BeanConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/controller/SwaggerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/entity/enums/UserRoleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/ConflictException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/ServiceUnavailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/UnprocessableEntityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/SecurityResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/TokenAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/TokenAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/TokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/TokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/TokenValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/impl/TokenProviderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/security/impl/TokenValidatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/CommonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/HeaderUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/PathUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/SecurityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/30fad40e-3c89-4c98-8030-d8586519dbdc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/server.swagger.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/configuration/WebConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/controller/PostApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/controller/PostApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/dto/enums/HttpHeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/ErrorType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/exception/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/service/impl/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/HeaderUtility.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/vadim/server/utility/converter/PostConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/config/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/config/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/db/migration/V1__init_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/db/migration/V1__init_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/swagger/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/swagger/openapi.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/swagger/swagger.yaml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +143,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -360,11 +321,11 @@
       <item itemvalue="Gradle.server [clean generateApi]" />
       <item itemvalue="Gradle.server [clean build]" />
       <item itemvalue="Gradle.ServerApplicationTests" />
+      <item itemvalue="Gradle.server [clean openApiGenerate]" />
       <item itemvalue="JavaScript Debug.Angular Application (ui)" />
       <item itemvalue="npm.start" />
       <item itemvalue="Protractor.E2E Tests (ui)" />
       <item itemvalue="Spring Boot.ServerApplication" />
-      <item itemvalue="Gradle.server [clean openApiGenerate]" />
     </list>
     <recent_temporary>
       <list>
@@ -402,7 +363,7 @@
       <workItem from="1562310245351" duration="10994000" />
       <workItem from="1562398887180" duration="321000" />
       <workItem from="1562569231895" duration="215000" />
-      <workItem from="1564685317875" duration="2466000" />
+      <workItem from="1564685317875" duration="2942000" />
     </task>
     <servers />
   </component>

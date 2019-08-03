@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/Downloads.forum.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/Downloads.forum.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.vadim.server.iml" filepath="$PROJECT_DIR$/.idea/modules/com.vadim.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.vadim.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.vadim.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.vadim.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.vadim.server.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forum.iml" filepath="$PROJECT_DIR$/.idea/modules/forum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/forum.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forum.server.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/forum.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/forum.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/forum.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/forum.server.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/forum.ui.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/forum.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/forum.ui.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/forum.ui.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/forum.ui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/forum.ui.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/server.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server.test.iml" />
+    </modules>
+  </component>
+</project>

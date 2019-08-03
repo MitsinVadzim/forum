@@ -1,8 +1,12 @@
 package com.vadim.server.configuration;
 
+import com.vadim.server.security.TokenAuthenticationProvider;
+import com.vadim.server.security.TokenFilter;
+import com.vadim.server.security.TokenValidator;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -10,12 +14,20 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+
+import static com.vadim.controllers.api.AuthApi.*;
+import static org.springframework.http.HttpMethod.OPTIONS;
+import static org.springframework.http.HttpMethod.POST;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @EnableWebSecurity
 @AllArgsConstructor
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    private final TokenAuthenticationProvider tokenAuthenticationProvider;
+    private final TokenValidator tokenValidator;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -33,7 +45,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
+        httpSecurity
+                .addFilterBefore(new TokenFilter(tokenValidator), BasicAuthenticationFilter.class);
+
+        httpSecurity
+                .authenticationProvider(tokenAuthenticationProvider);
+
         httpSecurity.authorizeRequests()
-                .anyRequest().permitAll();
+                .antMatchers(POST, loginPath).permitAll()
+                .antMatchers(POST, signupPath).permitAll()
+                .antMatchers(POST, refreshTokenPath).permitAll()
+                .antMatchers(OPTIONS, "/**").permitAll()
+
+                .antMatchers(basePath + "/**").authenticated();
+    }
+
+    @Override
+    protected void configure(final AuthenticationManagerBuilder authenticationManagerBuilder) {
+        authenticationManagerBuilder.authenticationProvider(tokenAuthenticationProvider);
     }
 }

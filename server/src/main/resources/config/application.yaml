@@ -1,4 +1,29 @@
 ---
+app:
+  jwt:
+    base64-secret: "${APP_JWT_BASE64_SECRET:}"
+    access-token-validity: "3600" # 1 hour in seconds
+    refresh-token-validity: "2592000" # 30 days in seconds
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "${SPRING_DATASOURCE_URL:}"
+    username: "${SPRING_DATASOURCE_USERNAME:}"
+    password: "${SPRING_DATASOURCE_PASSWORD:}"
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: "${PORT:8080}"
+
 ---
 spring:
   profiles: local
@@ -10,9 +35,7 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
     show-sql: true
-    generate-ddl: true
   servlet:
     multipart:
       max-file-size: 200MB
@@ -25,3 +48,32 @@ spring:
     url: jdbc:postgresql://localhost:5432/forum_db
   flyway:
     baseline-on-migrate: true
+
+---
+
+---
+spring:
+  profiles: test
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+      file-size-threshold: 1MB
+  flyway:
+    baseline-on-migrate: true
+
+---
+
+app:
+  jwt:
+    base64-secret: "dvkfGCq2G00TFJ3j+4UDS+CPwAVLkLziJXlXUvNy2jr0NkIH4QPtfXOLpHK1G++RixsyY5CX6BRh82lZySF4Xg=="
+

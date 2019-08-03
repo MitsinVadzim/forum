@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.vadim.forum.server.main" target="11" />
+      <module name="com.vadim.forum.server.test" target="11" />
+      <module name="com.vadim.server.main" target="11" />
+      <module name="com.vadim.server.test" target="11" />
+      <module name="forum.buildSrc.main" target="11" />
+      <module name="forum.buildSrc.test" target="11" />
+      <module name="forum.server.buildSrc.main" target="11" />
+      <module name="forum.server.buildSrc.test" target="11" />
+      <module name="forum.server.main" target="11" />
+      <module name="forum.server.test" target="11" />
+      <module name="forum.ui.main" target="11" />
+      <module name="forum.ui.test" target="11" />
+      <module name="server.buildSrc.main" target="11" />
+      <module name="server.buildSrc.test" target="11" />
+      <module name="server.main" target="11" />
+      <module name="server.swagger" target="11" />
+      <module name="server.test" target="11" />
+      <module name="server_buildSrc_main" target="11" />
+      <module name="server_buildSrc_test" target="11" />
+      <module name="server_main" target="11" />
+      <module name="server_test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

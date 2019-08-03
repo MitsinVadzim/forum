@@ -3,6 +3,7 @@ package com.vadim.server.controller;
 import com.vadim.controllers.api.PostApi;
 import com.vadim.model.rest.RestPostModel;
 import com.vadim.server.service.PostService;
+import com.vadim.server.utility.HeaderUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
@@ -13,10 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-
 import java.util.List;
 
-import static com.vadim.server.utility.HeaderUtility.createPaginationHeaders;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
@@ -33,7 +32,7 @@ public class PostApiController implements PostApi {
             @RequestParam(value = "size", required = false, defaultValue = "10") final Integer size
     ) {
         final Page<RestPostModel> postPage = postService.getPosts(page, size);
-        final HttpHeaders headers = createPaginationHeaders(postPage, getPostsPath);
+        final HttpHeaders headers = HeaderUtil.generatePaginationHeaders(getPostsPath, postPage);
 
         return new ResponseEntity<>(postPage.getContent(), headers, OK);
     }

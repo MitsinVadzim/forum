@@ -8,9 +8,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    properties:
-      hibernate:
-        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
   servlet:
     multipart:
       max-file-size: -1
@@ -31,7 +28,6 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-        dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
     show-sql: true
   servlet:
     multipart:
@@ -45,3 +41,28 @@ spring:
     url: jdbc:postgresql://192.168.64.2:5432/forum_db
   flyway:
     baseline-on-migrate: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 275079298796-ea410hnci1va45jsa5lhgjq9frbcr4ik.apps.googleusercontent.com
+            clientSecret: q9Pg7OhRXuObwdXB_ku2xPPW
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
+  oauth2:
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the client in the /oauth2/authorize request.
+    # We're not using cookies because they won't work well in mobile clients.
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
+      - myandroidapp://oauth2/redirect
+      - myiosapp://oauth2/redirect

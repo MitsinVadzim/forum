@@ -5,7 +5,27 @@ info:
   description: Forum - API
 tags:
   - name: Post
+  - name: Auth
 paths:
+  /auth/login:
+    get:
+      tags:
+        - Auth
+      operationId: login
+      security: []
+      requestBody:
+        $ref: "#/components/requestBodies/LoginRequest"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TokenModel"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
   /posts:
     get:
       tags:
@@ -53,12 +73,52 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Problem"
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+  requestBodies:
+    LoginRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/LoginRequest"
+      required: true
   securitySchemes:
     userAuth:
       type: apiKey
       in: header
       name: Authorization
   schemas:
+    TokenModel:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        accessIssuedAt:
+          type: integer
+          format: int64
+        accessExpiresIn:
+          type: integer
+          format: int64
+        refreshToken:
+          type: string
+        refreshIssuedAt:
+          type: integer
+          format: int64
+        refreshExpiresIn:
+          type: integer
+          format: int64
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
     PostModel:
       type: object
       required:

@@ -1,4 +1,12 @@
---
+---
+app:
+  dir:
+    upload-dir: "${APP_DIR_UPLOAD_DIR}"
+  jwt:
+    base64-secret: "${APP_JWT_BASE64_SECRET:}"
+    access-token-validity: "3600" # 1 hour in seconds
+    refresh-token-validity: "31536000" # year in seconds
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -7,7 +15,12 @@ spring:
     password: "${SPRING_DATASOURCE_PASSWORD:}"
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
+      properties:
+        hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: true
   servlet:
     multipart:
       max-file-size: -1
@@ -15,14 +28,15 @@ spring:
   jackson:
     default-property-inclusion: non_null
 
+server:
+  port: "${PORT:8080}"
 
----
 ---
 spring:
   profiles: local
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         jdbc:
@@ -38,31 +52,36 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: forum
     password: forum
-    url: jdbc:postgresql://192.168.64.2:5432/forum_db
+    url: jdbc:postgresql://localhost:5432/forum_db
   flyway:
     baseline-on-migrate: true
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            clientId: 275079298796-ea410hnci1va45jsa5lhgjq9frbcr4ik.apps.googleusercontent.com
-            clientSecret: q9Pg7OhRXuObwdXB_ku2xPPW
-            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
-            scope:
-              - email
-              - profile
+
+---
+
+---
+spring:
+  profiles: test
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+      file-size-threshold: 1MB
+  flyway:
+    baseline-on-migrate: true
+
+---
 
 app:
-  auth:
-    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
-    tokenExpirationMsec: 864000000
-  oauth2:
-    # After successfully authenticating with the OAuth2 Provider,
-    # we'll be generating an auth token for the user and sending the token to the
-    # redirectUri mentioned by the client in the /oauth2/authorize request.
-    # We're not using cookies because they won't work well in mobile clients.
-    authorizedRedirectUris:
-      - http://localhost:3000/oauth2/redirect
-      - myandroidapp://oauth2/redirect
-      - myiosapp://oauth2/redirect
+  dir:
+    upload-dir: "src/main/resources/"
+  jwt:
+    base64-secret: "dvkfGCq2G00TFJ3j+4UDS+CPwAVLkLziJXlXUvNy2jr0NkIH4QPtfXOLpHK1G++RixsyY5CX6BRh82lZySF4Xg=="
